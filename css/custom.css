@@ -23,8 +23,8 @@
   --n-gradient-dark: linear-gradient(135deg, #0B1437 0%, #1A2456 100%);
 
   /* Typography */
-  --n-font-display: 'Sora', sans-serif;
-  --n-font-body: 'Inter', sans-serif;
+  --n-font-display: 'Poppins', sans-serif;
+  --n-font-body: 'Poppins', sans-serif;
 
   /* Spacing rhythm (8px base) */
   --n-space-xs: 0.5rem;
@@ -418,6 +418,59 @@ a { text-decoration: none; }
 .icon-box-white {
   background: rgba(255,255,255,0.12);
   color: #fff;
+}
+
+/* Contenedor principal que oculta lo que desborda */
+.flag-slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+/* La pista que contiene las banderas y se mueve */
+.flag-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* Separación entre banderas */
+  padding-right: 3rem; /* Debe ser igual al gap para un loop perfecto */
+  animation: scrollFlags 25s linear infinite; /* Tiempo que tarda en dar la vuelta */
+}
+
+/* OPCIONAL PERO RECOMENDADO: Pausar el carrusel al pasar el mouse por encima */
+.flag-slider:hover .flag-track {
+  animation-play-state: paused;
+}
+
+/* Animación del carrusel */
+@keyframes scrollFlags {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Estilos de las banderas (Se mantienen tus efectos) */
+.flag-img {
+  width: 75px; 
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  /* Grayscale inicial */
+  filter: grayscale(100%) opacity(0.6);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Efecto al pasar el mouse por una bandera individual */
+.flag-item:hover .flag-img {
+  filter: grayscale(0%) opacity(1);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
 }
 
 /* =====================================================
