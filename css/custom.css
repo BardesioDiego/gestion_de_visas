@@ -777,7 +777,7 @@ a { text-decoration: none; }
    FOOTER
    ===================================================== */
 .footer-nexora {
-  background: var(--n-navy);
+  background: #2f3775;
   color: rgba(255,255,255,0.65);
   padding-top: var(--n-space-2xl);
 }
