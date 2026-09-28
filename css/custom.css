@@ -248,8 +248,7 @@ a { text-decoration: none; }
 }
 .navbar-nexora .nav-link:hover,
 .navbar-nexora .nav-link.active {
-  color: rgb(15, 15, 64) !important;
-  background: var(--n-bg-alt);
+  color: rgb(30, 30, 120)ant;
 }
 
 .navbar-toggler-custom {
