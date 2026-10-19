@@ -243,6 +243,21 @@ a { text-decoration: none; }
   transition: all 0.2s ease;
 }
 
+.navbar-blog-details:not(.scrolled) .nav-link,
+.navbar-blog-details:not(.scrolled) .nav-link:hover,
+.navbar-blog-details:not(.scrolled) .nav-link.active {
+  color: #fff !important;
+}
+
+.navbar-blog-details.scrolled .nav-link {
+  color: #2b3472 !important;
+}
+
+.navbar-blog-details.scrolled .nav-link:hover,
+.navbar-blog-details.scrolled .nav-link.active {
+  color: rgb(30, 30, 120) !important;
+}
+
 .nav2{
   color: yellow !important;;
 }
