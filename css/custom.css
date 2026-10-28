@@ -258,6 +258,15 @@ a { text-decoration: none; }
   color: rgb(30, 30, 120) !important;
 }
 
+.navbar-blog-details .logo-img-scrolled,
+.navbar-blog-details.scrolled .logo-img-initial {
+  display: none;
+}
+
+.navbar-blog-details.scrolled .logo-img-scrolled {
+  display: block;
+}
+
 .nav2{
   color: yellow !important;;
 }
@@ -486,7 +495,6 @@ a { text-decoration: none; }
 /* Efecto al pasar el mouse por una bandera individual */
 .flag-item:hover .flag-img {
   filter: grayscale(0%) opacity(1);
-  transform: translateY(-3px) scale(1.1);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
 }
 
